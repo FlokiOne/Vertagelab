@@ -3,28 +3,20 @@ package com.example.Vertagelab.model.PojoBuilder;
 import com.example.Vertagelab.model.Book;
 import com.example.Vertagelab.model.User;
 
-import java.math.BigInteger;
-
 public class BookBuilder {
 
-    private BigInteger bookId;
+    private Integer bookId;
     private String title;
-    private String authorName;
     private User user;
     private Book.Status status;
 
-    public BookBuilder withBookId(BigInteger bookId) {
+    public BookBuilder withBookId(Integer bookId) {
         this.bookId = bookId;
         return this;
     }
 
     public BookBuilder withTitle(String title) {
         this.title = title;
-        return this;
-    }
-
-    public BookBuilder withAuthorName(String authorName) {
-        this.authorName = authorName;
         return this;
     }
 
@@ -39,7 +31,7 @@ public class BookBuilder {
     }
 
     public Book build() {
-        return new Book(bookId, title, authorName, user, status);
+        return new Book(bookId, title, user, status);
     }
 
 }

@@ -3,17 +3,16 @@ package com.example.Vertagelab.model.PojoBuilder;
 import com.example.Vertagelab.model.Book;
 import com.example.Vertagelab.model.User;
 
-import java.math.BigInteger;
 import java.util.List;
 
 public class UserBuilder {
 
-    private BigInteger userId;
+    private Integer userId;
     private String firstName;
     private String lastName;
     private List<Book> booksList;
 
-    public UserBuilder withUserId(BigInteger userId) {
+    public UserBuilder withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
